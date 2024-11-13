@@ -17,7 +17,7 @@
                 <img src="img/bat 1.jpg" alt="Studio Apartment - Bathroom">
             </div>
             <p>Ideal for singles, our studio apartments offer a cozy living space with all essentials, designed for efficient and stylish living.</p>
-            
+            <a href="payment.php" class="btn btn-success">Proceed to Payment</a><br>
             <a href="apartments.php">Back to Apartments</a>
         </section>
     </main>

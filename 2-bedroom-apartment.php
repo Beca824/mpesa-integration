@@ -16,12 +16,7 @@
                             <img src="img/kit 2.jpg" alt="2 Bedroom Apartment - Kitchen">
                         </div>
             <p>Spacious two-bedroom units with modern amenities, including a fully-equipped kitchen, air conditioning, and a balcony with a beautiful view.</p>
-                        <form action="pay.php" method="POST">
-                        <input type="hidden" name="apartment" value="2 Bedroom Apartment">
-                        <input type="hidden" name="amount" value="20000"> 
-                        <label for="phoneNumber">Phone Number:</label><br>
-                        <input type="text" name="phoneNumber" required><br><br>
-                        <button type="submit">Pay Now</button><br>
+            <a href="payment.php" class="btn btn-success">Proceed to Payment</a><br>
             <a href="apartments.php">Back to Apartments</a>
         </section>
     </main>

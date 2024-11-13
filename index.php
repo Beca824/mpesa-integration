@@ -25,6 +25,6 @@
     <h1>Welcome to Our Rental Apartment </h1>
     <p>Find your perfect apartment here!</p>
     <p>Modern, comfortable apartments designed to fit your lifestyle. Choose from a variety of floor plans and enjoy top-notch amenities.</p>
-    <button onclick="window.location.href='apartments.html'">View Apartments</button>
+    <button onclick="window.location.href='apartments.php'">View Apartments</button>
 </body>
 </html>

@@ -28,6 +28,9 @@
                             <img src="img/liv 2.jpg" alt="2 Bedroom Apartment - Living Room">
                             <img src="img/bd 2.jpg" alt="2 Bedroom Apartment - Bedroom">
                             <img src="img/kit 2.jpg" alt="2 Bedroom Apartment - Kitchen">
+                            <p>Spacious two-bedroom units with modern amenities, including a fully-equipped kitchen, air conditioning, and a balcony with a beautiful view.</p>
+                            
+
                         </div>
                     </form>
                         
@@ -37,7 +40,7 @@
                 <div class="apartment">
                     <a href="3-bedroom-apartment.php">
                         <h3>3 Bedroom Apartment</h3>
-                        <form class="form" action="acton.php" method="POST">
+                        <form class="form" action="action.php" method="POST">
                         <h3 class="card-title mb-3 text-primary">Ksh.25,000</h3>
                         <div class="apartment-images">
                             <img src="img/liv 1.jpg" alt="3 Bedroom Apartment - Living Room">
@@ -45,7 +48,10 @@
                             <img src="img/kit 1.jpg" alt="3 Bedroom Apartment - Kitchen">
                         </div>
                         <p>Perfect for families, our three-bedroom apartments feature large living spaces, multiple bathrooms, and access to exclusive facilities.</p>
+                        
+
                         </form>
+                        
                     </a>
                 </div>
                 <div class="apartment">
@@ -59,7 +65,8 @@
                             <img src="img/bat 1.jpg" alt="Studio Apartment - Bathroom">
                         </div>
                         <p>Ideal for singles, our studio apartments offer a cozy living space with all essentials, designed for efficient and stylish living.</p>
-                        
+                       
+
                     </a>
                 </div>
             </div>

@@ -17,13 +17,7 @@
                     <img src="img/kit 1.jpg" alt="3 Bedroom Apartment - Kitchen">
                 </div>
             <p>Perfect for families, our three-bedroom apartments feature large living spaces, multiple bathrooms, and access to exclusive facilities.</p>
-            <form action="pay.php" method="POST">
-                <input type="hidden" name="apartment" value="3 Bedroom Apartment">
-                <input type="hidden" name="amount" value="25000"> 
-                <label for="phoneNumber">Phone Number:</label><br>
-                <input type="text" name="phoneNumber" required><br><br>
-                <button type="submit">Pay Now</button><br>
-            </form>
+            <a href="payment.php" class="btn btn-success">Proceed to Payment</a><br>
             <a href="apartments.php">Back to Apartments</a>
         </section>
     </main>
