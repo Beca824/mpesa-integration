@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apartments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -71,7 +72,35 @@
                 </div>
             </div>
                         </form>
-                        
+                        <div class="apartment">
+                   <a href="bedsitter-apartment.php">
+                   <h3>Bedsitter Apartment</h3>
+                   <form class="form" action="acton.php" method="POST">
+                            <h3 class="card-title mb-3 text-primary">Ksh.9,000</h3>
+                        <div class="apartment-images">
+                        <img src="img/bath.jpg" alt="Bedsitter Apartment - Bathroom">
+                            <img src="img/bed.jpg" alt="Bedsitter Apartment - Bedroom">
+                            <img src="img/kit 4.jpg" alt="Bedsitter Apartment - Kitchen">
+                        </div>
+            <p>Spacious bedsitter fully-equipped with a bathoom, kitchen and a balcony with a beautiful view.</p>
+            </form>
+            </a>
+                   </div>   
+                   
+                   <div class="apartment">
+                <a href="1-bedroom-apartment.php">
+                <h3>1 Bedroom Apartment</h3>
+                <form class="form" action="action.php" method="POST">
+                    <h3 class="card-title mb-3 text-primary">Ksh.12,000</h3>
+                    <div class="apartment-images">
+                            <img src="img/liv 4.jpg" alt="1 Bedroom Apartment - Living Room">
+                            <img src="img/bd 3.jpg" alt="1 Bedroom Apartment - Bedroom">
+                            <img src="img/kit 4.jpg" alt="1 Bedroom Apartment - Kitchen">
+                        </div>
+            <p>Spacious one-bedroom units with modern amenities, including a fully-equipped kitchen and a balcony with a beautiful view.</p>
+                </form>                       
+                </a>
+            </div>
             
         </section>
     </main>
