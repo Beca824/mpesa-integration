@@ -1,23 +1,40 @@
 <?php
-// Process sign-in form
 session_start();
+
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
 
     // Database connection
-    $conn = new mysqli('localhost', 'username', 'password', 'database');
+    $conn = new mysqli('localhost:8080', 'root', '', 'web');
+    
+    // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $result = $conn->query("SELECT * FROM users WHERE username='$username' AND password='$password'");
+    // Prepared statement to prevent SQL injection
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Check if user exists and verify password
     if ($result->num_rows > 0) {
-        $_SESSION['username'] = $username;
-        $successMessage = "Sign-in successful!";
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row['password'])) {
+            $_SESSION['username'] = $username;
+            $successMessage = "Sign-in successful!";
+        } else {
+            $errorMessage = "Invalid username or password.";
+        }
     } else {
         $errorMessage = "Invalid username or password.";
     }
+
+    $stmt->close();
     $conn->close();
 }
 ?>

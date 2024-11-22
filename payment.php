@@ -114,5 +114,6 @@
     <script type="text/javascript" src=""></script>
     <script type="text/javascript" src=""></script>
     <script type="text/Javascript"></script>
+    <a href="apartments.php">Back to Apartments</a>
   </body>
 </html>
