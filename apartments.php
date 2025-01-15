@@ -13,10 +13,11 @@
         <a href="about.php">About</a>
         <a href="contact.php">Contact</a>
         <a href="apartments.php">Apartments</a>
-        <a href="signin.php">Sign In</a>
+        <a href="login.php">Login</a>
+        
     </nav>
     <main>
-        <section class="about">
+        < class="about">
             <h2>Our Apartments</h2>
             
             <div class="apartment-list">
@@ -66,12 +67,11 @@
                             <img src="img/bat 1.jpg" alt="Studio Apartment - Bathroom">
                         </div>
                         <p>Ideal for singles, our studio apartments offer a cozy living space with all essentials, designed for efficient and stylish living.</p>
-                       
+                       </form>
 
                     </a>
                 </div>
-            </div>
-                        </form>
+                    
                         <div class="apartment">
                    <a href="bedsitter-apartment.php">
                    <h3>Bedsitter Apartment</h3>
@@ -101,7 +101,8 @@
                 </form>                       
                 </a>
             </div>
-            
+            </div>
+        
         </section>
     </main>
 </body>

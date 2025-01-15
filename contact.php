@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $message = $_POST['message'];
 
     // Database connection
-    $conn = new mysqli('localhost', 'username', 'password', 'database');
+    $conn = new mysqli('localhost:8080', 'root', '', 'web');
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <a href="about.php">About</a>
         <a href="contact.php">Contact</a>
         <a href="apartments.php">Apartments</a>
-        <a href="signin.php">Sign In</a>
+        <a href="login.php">Login</a>
     </nav>
     <h1>Contact Us</h1>
 

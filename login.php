@@ -1,12 +1,47 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
+
+    if (!empty($username) && !empty($password)) {
+        // Secure the password
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Database connection
+        $conn = new mysqli('localhost', 'root', '', 'web.sql');
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Insert into the database
+        $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+        $stmt->bind_param('ss', $username, $hashed_password);
+
+        if ($stmt->execute()) {
+            // Redirect to the dashboard
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            echo "<p style='color: red;'>Error: " . $stmt->error . "</p>";
+        }
+
+        $stmt->close();
+        $conn->close();
+    } else {
+        echo "<p style='color: red;'>Please fill in all fields.</p>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    </head>
 <body>
     <nav>
         <a href="index.php">Home</a>
@@ -16,19 +51,32 @@
         <a href="login.php">Login</a>
         
     </nav>
-    <div class="content-wrapper">
     
-    <div class="text-content">
-    <h2>About Us</h2>
-  <p>Welcome to Kapedo Apartments.We’re dedicated to providing comfortable, modern living spaces that meet the highest standards of quality and convenience.</p><br>
-  
-  <h3>Our Values</h3>
-  <ul>
-    <li>Quality Living</li>
-    <li>Convenient Locations</li>
-    <li>Customer Satisfaction</li>
-  </ul>
-    </div>
+    <div class="cover_box">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="register.php">Register</a>
+                </div>
+            </form>
+        </div>
     </div>
     <footer class="footer">
         <div class="footer-content">
@@ -36,7 +84,6 @@
                 <h3>About</h3>
                 <p>We Turn Dreams Into Reality</p>
                 <p> Kapedo Apartments is dedicated to providing comfortable, modern living spaces that meet the highest standards of quality and convenience.</p>
-        
             </div>
             
             <div class="footer-middle">

@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <nav>
         <a href="index.php">Home</a>
         <a href="about.php">About</a>
         <a href="contact.php">Contact</a>
         <a href="apartments.php">Apartments</a>
-        <a href="signin.php">Sign In</a>
-    </nav>
+        <a href="login.php">Login</a>
+    </nav>    
     
-        
-    </div>
+    <br>
     <h1>Kapedo Rental Apartment</h1>
     <h1>Welcome to Kapedo Rental Apartment</h1>
     
@@ -80,7 +80,7 @@
                     </a>
                     </form>
                 </div>
-            </div>
+            
                    
             <div class="apartment">
                 <a href="1-bedroom-apartment.php">
@@ -110,7 +110,7 @@
             </form>
             </a>
                    </div>     
-            
+            </div>
         </section>
     </main>
     <footer class="footer">

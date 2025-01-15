@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
     $feedback = htmlspecialchars($_POST['feedback']);
 
-    // Option 1: Save feedback to a file (Optional)
+    // Option 1: Save feedback to a file 
     $file = fopen("feedback.txt", "a");
     fwrite($file, "Name: $name\nEmail: $email\nFeedback: $feedback\n\n");
     fclose($file);
